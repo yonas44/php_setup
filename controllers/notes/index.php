@@ -1,14 +1,10 @@
 <?php
-
+use Core\App;
 use Core\Database;
 
-$config = require(base_path('config.php'));
-
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $query = "select * from notes where user_id = 5";
-
-// $id = $_GET['id'];
 
 $notes = $db->query($query)->findAll();
 
