@@ -11,7 +11,6 @@ $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-
   if (!Validator::string($_POST['body'], 1, 255)) {
     $errors['body'] = 'A body of not more than 255 characters is required.';
   }
@@ -21,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       'body' => $_POST['body'],
       'user_id' => 5
     ]);
+
+    header('location: /notes');
   }
 }
 
