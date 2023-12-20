@@ -14,6 +14,7 @@
       <input type="hidden" name="_method" value="DELETE">
       <input type="hidden" name="id" value="<?= $note['id'] ?>">
       <button class="text-sm text-red-500 mt-5">Delete</button>
+      <a class="text-sm mt-5 ml-3" href="/note/edit?id=<?= $note['id'] ?>">Edit</a>
     </form>
   </div>
 </main>
